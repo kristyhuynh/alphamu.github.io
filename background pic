@@ -30,7 +30,7 @@ Create a file called styles.css:
 
 CopyRun
 body {
-  background-image: url('your-image-path.jpg');
+  background-image: url('background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
