@@ -31,7 +31,7 @@ nav {
 }
 
 .logo span {
-    color: #64ffda;
+    color: #ffffff;
 }
 
 .nav-links {
@@ -51,7 +51,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #64ffda;
+    color: #ffffff;
 }
 
 /* === HERO SECTION === */
@@ -68,7 +68,7 @@ nav {
 }
 
 .hero-content span {
-    color: #64ffda;
+    color: #ffffff;
 }
 
 .hero-content p {
@@ -76,7 +76,7 @@ nav {
 }
 
 .btn {
-    background-color: #64ffda;
+    background-color: #ffffff;
     color: #0a192f;
     padding: 0.7rem 1.5rem;
     border-radius: 25px;
