@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Page</title>
+  <style>
+    body {
+      background-image: url('your-image-path.jpg');
+      background-size: cover; /* makes the image cover the whole page */
+      background-position: center; /* centers the image */
+      background-repeat: no-repeat; /* prevents repeating the image */
+      margin: 0; /* optional: remove default margin */
+      height: 100vh; /* make sure the body takes full viewport height */
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to My Website</h1>
+  <p>This is the home page.</p>
+  <a href="about.html">Go to About Page</a><br>
+  <a href="contact.html">Go to Contact Page</a>
+</body>
+</html>
+How to customize:
+Replace 'your-image-path.jpg' with the actual path or URL to your background image.
+You can also add the CSS into an external stylesheet if preferred.
+Example with external CSS:
+Create a file called styles.css:
+
+CopyRun
+body {
+  background-image: url('your-image-path.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  height: 100vh;
+}
+And link it in your HTML:
+
+CopyRun
+<head>
+  <!-- other tags -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+Would you like me to generate the full HTML code with the background included?
+
+Copy
+Summarize
+Delete
+
+
+
+
+
+
