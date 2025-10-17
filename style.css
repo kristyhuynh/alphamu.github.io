@@ -56,7 +56,7 @@ nav {
 
 /* === HERO SECTION === */
 #hero {
-    background: linear-gradient(rgba(47, 10, 10, 0.9), rgba(47, 10, 10, 0.9)), url('hero-bg.jpg') center/cover;
+    background: linear-gradient(rgba(47, 10, 10, 0.9), rgba(47, 10, 10, 0.9)), url('background.png') center/cover;
     color: white;
     text-align: center;
     padding: 6rem 2rem;
