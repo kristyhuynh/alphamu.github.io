@@ -22,36 +22,3 @@
   <a href="contact.html">Go to Contact Page</a>
 </body>
 </html>
-How to customize:
-Replace 'your-image-path.jpg' with the actual path or URL to your background image.
-You can also add the CSS into an external stylesheet if preferred.
-Example with external CSS:
-Create a file called styles.css:
-
-CopyRun
-body {
-  background-image: url('background.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 0;
-  height: 100vh;
-}
-And link it in your HTML:
-
-CopyRun
-<head>
-  <!-- other tags -->
-  <link rel="stylesheet" href="styles.css" />
-</head>
-Would you like me to generate the full HTML code with the background included?
-
-Copy
-Summarize
-Delete
-
-
-
-
-
-
