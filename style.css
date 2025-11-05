@@ -185,7 +185,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #0a192f;
+    background-color: #2f0a0a;
 }
 
 .nav-links {
@@ -245,7 +245,7 @@ footer {
         height: 0;
         overflow: hidden;
         flex-direction: column;
-        background: #0a192f;
+        background: #2f0a0a;
         width: 100%;
         text-align: center;
         transition: 0.4s;
