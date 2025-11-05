@@ -261,3 +261,40 @@ footer {
         padding: 12px 0;
     }
 }
+.team-section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.team-subtext {
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.team-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 1rem;
+}
+
+.team-card {
+    background: white;
+    padding: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    transition: 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+}
+
+.team-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
