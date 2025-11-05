@@ -3,31 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Alpha Mu Engineering Project</title>
+    <title>Team & Contacts | John Doe Engineering</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <h1 class="logo">John Doe<span> Engineering</span></h1>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="skills.html">Skills</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:alpha-mu-pledge-class@googlegroups.com">alpha-mu-pledge-class@googlegroups.com</a></p>
-        <p>Instagram: <a href="#">@alphamooo</a></p>
-        <p>GitHub: <a href="#">github.com/alphamu.github.io</a></p>
-    </section>
+<header>
+    <nav class="navbar">
+        <h1 class="logo">John Doe<span> Engineering</span></h1>
 
-    <footer>
-        <p>Alpha Mu Engineering Project | Fall 2025</p>
-    </footer>
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="team-section">
+    <h2>Team Contacts</h2>
+    <p class="team-subtext">Meet the team — click a profile to learn more or connect</p>
+
+    <div class="team-grid">
+        
+        <!-- COPY THESE CARDS TO EDIT YOUR TEAM MEMBERS -->
+        <!-- Profile 1 -->
+        <div class="team-card">
+            <img src="images/profile1.jpg" alt="Team Member">
+            <h3>John Doe</h3>
+            <p>Lead Mechanical Engineer — Design & Prototyping Specialist</p>
+        </div>
+
+        <div class="team-card">
+            <img src="images/profile2.jpg" alt="Team Member">
+            <h3>Jane Smith</h3>
+            <p>Thermofluid Systems Engineer — CFD & Heat Transfer Expert</p>
+        </div>
+
+        <div class="team-card">
+            <img src="images/profile3.jpg" alt="Team Member">
+            <h3>Alex Johnson</h3>
+            <p>CAD Designer — SolidWorks & Fusion 360 Technician</p>
+        </div>
+
+        <div class="team-card">
+            <img src="images/profile4.jpg" alt="Team Member">
+            <h3>Maria Williams</h3>
+            <p>Materials Engineer — Stress Testing & Failure Analysis</p>
+        </div>
+
+        <div class="team-card">
+            <img src="images/profile5.jpg" alt="Team Member">
+            <h3>Daniel Lee</h3>
+            <p>Embedded Systems Engineer — Arduino & Control Systems</p>
+        </div>
+
+        <div class="team-card">
+            <img src="images/profile6.jpg" alt="Team Member">
+            <h3>Emily Brown</h3>
+            <p>Robotics Developer — Mechatronics & Automation</p>
+        </div>
+
+        <div class="team-card">
+            <img src="images/profile7.jpg" alt="Team Member">
+            <h3>Michael Carter</h3>
+            <p>Electronics Specialist — PCB Design & Power Systems</p>
+        </div>
+
+        <div class="team-card">
+            <img src="images/profile8.jpg" alt="Team Member">
+            <h3>Sophia Davis</h3>
+            <p>Analyst — MATLAB Simulation & Data Modeling</p>
+        </div>
+
+        <div class="team-card">
+            <img src="images/profile9.jpg" alt="Team Member">
+            <h3>Chris Lopez</h3>
+            <p>Machining & Manufacturing — CNC & 3D Printing</p>
+        </div>
+
+        <div class="team-card">
+            <img src="images/profile10.jpg" alt="Team Member">
+            <h3>Rachel Green</h3>
+            <p>Aerospace Intern — Flight Systems & Aerodynamics</p>
+        </div>
+
+        <div class="team-card">
+            <img src="images/profile11.jpg" alt="Team Member">
+            <h3>Technical Support</h3>
+            <p>General project questions & support inquiries</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 John Doe Engineering | All Rights Reserved</p>
+</footer>
+
+<script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
+
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        hamburger.classList.toggle("toggle");
+    });
+</script>
+
 </body>
 </html>
