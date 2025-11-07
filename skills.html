@@ -171,3 +171,56 @@
   </script>
 </body>
 </html>
+/* === EXPANDABLE PROJECT GALLERY === */
+.project-details {
+  max-height: 0;
+  overflow: hidden;
+  background: #fff;
+  margin: 1rem auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: max-height 0.7s ease, padding 0.5s ease;
+  width: 95%;
+}
+
+.project-details.open {
+  max-height: 1200px; /* expands smoothly */
+  padding: 1.5rem;
+}
+
+.details-content {
+  text-align: left;
+}
+
+.details-content h4 {
+  color: #2f0a0a;
+  margin-bottom: 1rem;
+}
+
+.details-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.details-images img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  background-color: #ddd;
+}
+
+.details-content p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Make the expansion responsive */
+@media (max-width: 768px) {
+  .details-images {
+    grid-template-columns: 1fr;
+  }
+}
