@@ -14,7 +14,6 @@ body {
 
 /* === NAVIGATION === */
 header {
-    position: fixed;
     background-color: #2f0a0a;
     color: white;
     padding: 1rem 2rem;
