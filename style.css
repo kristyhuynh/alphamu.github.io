@@ -33,12 +33,14 @@ nav {
 .logo span {
     color: #ffffff;
 }
+
 .logo a {
     text-decoration: none;
     color: inherit;
 }
+
 .logo a:hover {
-    opacity: 0.8; /* subtle hover effect */
+    opacity: 0.8;
 }
 
 .nav-links {
@@ -54,28 +56,73 @@ nav {
     transition: 0.3s;
 }
 
-/* === ACTIVE NAV LINK === */
 .nav-links li a.active {
     border-bottom: 2px solid #ffffff;
     padding-bottom: 2px;
 }
 
-/* Hover effect */
 .nav-links li a:hover {
     color: #ffffff;
 }
 
-/* === HERO / HEADER SECTIONS === */
-header + section {
-    min-height: 150px; /* ensures all pages have consistent header section height */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 2rem;
+/* === HERO / HOME SECTION === */
+#hero {
+    background: linear-gradient(rgba(47, 10, 10, 0.9), rgba(47, 10, 10, 0.9)), url('background.png') center/cover;
+    color: white;
     text-align: center;
-    background-color: #fff;
+    padding: 6rem 2rem;
 }
 
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content span {
+    color: #ffffff;
+}
+
+.hero-content p {
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background-color: #ffffff;
+    color: #2f0a0a;
+    padding: 0.7rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* === CONTACT PAGE === */
+#contact {
+    background-color: #f0f0f0;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#contact h2 {
+    color: #2f0a0a;
+    margin-bottom: 1rem;
+}
+
+#contact a {
+    color: #2f0a0a;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    color: #ffffff;
+}
+
+/* === SECTION HEADER === */
 .section-header {
     text-align: center;
     margin-bottom: 2rem;
@@ -123,7 +170,7 @@ header + section {
     margin-bottom: 1rem;
 }
 
-/* === GALLERY SECTION === */
+/* === PROJECT GALLERY === */
 .gallery-container {
     display: flex;
     flex-direction: column;
@@ -193,7 +240,7 @@ header + section {
     line-height: 1.5;
 }
 
-/* Horizontal images in details section with hover effect */
+/* Horizontal images in details section with hover */
 .details-images {
     display: flex;
     flex-wrap: wrap;
@@ -283,7 +330,16 @@ header + section {
     transform: translateY(0);
 }
 
-/* === MOBILE RESPONSIVENESS === */
+/* === FOOTER === */
+footer {
+    background-color: #2f0a0a;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+/* === MOBILE RESPONSIVE === */
 @media (max-width: 768px) {
     .timeline-item,
     .timeline-item.left,
@@ -302,13 +358,4 @@ header + section {
     .project-details {
         width: 95%;
     }
-}
-
-/* === FOOTER === */
-footer {
-    background-color: #2f0a0a;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
 }
