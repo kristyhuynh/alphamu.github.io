@@ -963,3 +963,18 @@ footer {
   font-size: 1rem;
   color: #555;
 }
+.details-images {
+  display: flex;           /* arrange images in a row */
+  flex-wrap: wrap;         /* wrap to next line if they overflow on small screens */
+  justify-content: center; /* center the row */
+  gap: 1rem;               /* spacing between images */
+  margin-bottom: 1rem;
+}
+
+.details-images img {
+  width: 200px;            /* fixed width for each image */
+  height: 150px;           /* fixed height */
+  object-fit: cover;       /* keep images proportional */
+  border-radius: 10px;
+  background-color: #ddd;
+}
