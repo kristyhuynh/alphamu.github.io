@@ -298,11 +298,22 @@ footer {
     border-radius: 10px;
     margin-bottom: 1rem;
 }
-#about, #projects, #skills, #contact {
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+.btn {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#about:hover, #projects:hover, #skills:hover, #contact:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Titles */
+#about h2, #projects h2, #skills h2, #contact h2 {
+    display: inline-block; /* lets them animate independently */
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+#about h2:hover, #projects h2:hover, #skills h2:hover, #contact h2:hover {
+    transform: translateY(-5px);
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
