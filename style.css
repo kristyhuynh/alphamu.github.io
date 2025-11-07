@@ -42,6 +42,7 @@ nav {
 }
 .nav-links {
     list-style: none;
+    position: fixed;
 }
 
 .nav-links li {
