@@ -43,6 +43,8 @@ nav {
 .nav-links {
     list-style: none;
     position: fixed;
+    top: 0;
+    right: 30;
 }
 
 .nav-links li {
