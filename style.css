@@ -867,7 +867,7 @@ footer {
   font-size: 1rem;
   margin-top: 0.5rem;
 }
-/* === PROJECT GALLERY (CENTERED & EXPANDABLE) === */
+/* === GALLERY CONTAINER (CENTERED) === */
 .gallery-container {
   display: flex;
   flex-direction: column;
@@ -899,7 +899,7 @@ footer {
   margin-bottom: 1rem;
 }
 
-/* === EXPANDING DETAILS (Fluid Accordion Animation) === */
+/* === EXPANDABLE DETAILS (SMOOTH SLIDE / FADE) === */
 .project-details {
   max-height: 0;
   overflow: hidden;
@@ -907,7 +907,7 @@ footer {
   margin: 0 auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: max-height 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+  transition: max-height 0.7s cubic-bezier(0.4,0,0.2,1),
               opacity 0.5s ease,
               transform 0.5s ease;
   width: 90%;
@@ -945,20 +945,4 @@ footer {
   object-fit: cover;
   border-radius: 10px;
   background-color: #ddd;
-}
-
-/* === TIMELINE ALTERNATING COLORS === */
-.timeline-item.alternate .timeline-content {
-  background-color: #f7efef; /* maroon tint for contrast */
-}
-
-/* === TIMELINE SMOOTH FADE-IN === */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
