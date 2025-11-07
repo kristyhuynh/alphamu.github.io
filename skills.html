@@ -1,37 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills | Alpha Mu ENgineering Project</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills | Alpha Mu Engineering Project</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    html { scroll-behavior: smooth; }
+
+    /* Skills chips */
+    .skills-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1.25rem;
+    }
+    .skills-list li { margin: 0; padding: 0; }
+    .skill-chip {
+      display: inline-block;
+      padding: 0.75rem 1.25rem;
+      border-radius: 999px;
+      background: #2f0a0a;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    }
+    .skill-chip:hover,
+    .skill-chip:focus {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 18px rgba(0, 0, 0, 0.18);
+      background: #4a1414;
+    }
+
+    /* Dropdown details */
+    .skill-details {
+      max-width: 1000px;
+      margin: 3rem auto 4rem;
+      padding: 0 1rem;
+    }
+    .skill-details details {
+      border: 1px solid #e9e2e2;
+      border-radius: 16px;
+      background: #fff;
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+    .skill-details summary {
+      cursor: pointer;
+      padding: 1rem 1.25rem;
+      font-weight: 700;
+      background: #f7f3f3;
+      position: relative;
+      list-style: none;
+    }
+    .skill-details summary::marker { display: none; }
+    .skill-details summary::after {
+      content: "▾";
+      position: absolute;
+      right: 1rem;
+      transition: transform 0.18s ease;
+    }
+    .skill-details details[open] summary::after {
+      transform: rotate(-180deg);
+    }
+    .detail-body {
+      padding: 1rem 1.25rem 1.25rem;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .detail-body img {
+      max-width: 100%;
+      border-radius: 12px;
+      display: block;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <h1 class="logo">John Doe<span> Engineering</span></h1>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <h1 class="logo">John Doe<span> Engineering</span></h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul class="skills-list">
-            <li>SolidWorks / AutoCAD</li>
-            <li>MATLAB / Simulink</li>
-            <li>ANSYS / CFD</li>
-            <li>Python / Arduino</li>
-            <li>Prototyping & Testing</li>
-        </ul>
-    </section>
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li><a class="skill-chip" href="#solidworks">SolidWorks / AutoCAD</a></li>
+      <li><a class="skill-chip" href="#matlab">MATLAB / Simulink</a></li>
+      <li><a class="skill-chip" href="#ansys">ANSYS / CFD</a></li>
+      <li><a class="skill-chip" href="#python">Python / Arduino</a></li>
+      <li><a class="skill-chip" href="#proto">Prototyping & Testing</a></li>
+    </ul>
+  </section>
 
-    <footer>
-        <p>Alpha Mu Engineering Project | Fall 2025</p>
-    </footer>
+  <section id="skill-details" class="skill-details">
+    <details id="solidworks">
+      <summary>SolidWorks / AutoCAD</summary>
+      <div class="detail-body">
+        <p>Assemblies, mates, drawings, and FEA analysis for design validation.</p>
+        <img src="images/solidworks-example.jpg" alt="SolidWorks assembly example" />
+      </div>
+    </details>
+
+    <details id="matlab">
+      <summary>MATLAB / Simulink</summary>
+      <div class="detail-body">
+        <p>Signal processing, modeling systems with stateflow, and ODE simulations.</p>
+        <img src="images/matlab-sim.png" alt="Simulink model example" />
+      </div>
+    </details>
+
+    <details id="ansys">
+      <summary>ANSYS / CFD</summary>
+      <div class="detail-body">
+        <p>CFD simulations, meshing, and post-processing pressure contours.</p>
+        <img src="images/ansys-cfd.png" alt="ANSYS CFD visualization" />
+      </div>
+    </details>
+
+    <details id="python">
+      <summary>Python / Arduino</summary>
+      <div class="detail-body">
+        <p>Sensor data logging, control loops, and serial communication projects.</p>
+        <img src="images/python-arduino.png" alt="Arduino circuit with Python graph" />
+      </div>
+    </details>
+
+    <details id="proto">
+      <summary>Prototyping & Testing</summary>
+      <div class="detail-body">
+        <p>3D printing (PLA vs PETG), mechanical tolerances, and iterative testing.</p>
+        <img src="images/prototyping.png" alt="Prototype photo" />
+      </div>
+    </details>
+  </section>
+
+  <footer>
+    <p>Alpha Mu Engineering Project | Fall 2025</p>
+  </footer>
+
+  <script>
+    function openDetailsFromHash() {
+      document.querySelectorAll('#skill-details details[open]').forEach(d => d.open = false);
+      const id = location.hash.replace('#', '');
+      if (!id) return;
+      const el = document.getElementById(id);
+      if (el && el.tagName.toLowerCase() === 'details') {
+        el.open = true;
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+    window.addEventListener('hashchange', openDetailsFromHash);
+    window.addEventListener('DOMContentLoaded', openDetailsFromHash);
+
+    document.addEventListener('click', (e) => {
+      if (e.target.matches('#skill-details summary')) {
+        const d = e.target.closest('details');
+        if (d && d.id) history.replaceState(null, '', '#' + d.id);
+      }
+    });
+  </script>
 </body>
 </html>
