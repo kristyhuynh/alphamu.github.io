@@ -33,37 +33,39 @@ nav {
 .logo span {
     color: #ffffff;
 }
+
 .logo a {
     text-decoration: none;
     color: inherit;
 }
+
 .logo a:hover {
-    opacity: 0.8; /* optional subtle hover effect */
+    opacity: 0.8;
 }
+
 .nav-links {
     list-style: none;
-    position: fixed;
-    top: 0;
-    right: 30;
+    display: flex;
+    gap: 2rem;
 }
 
-.nav-links li {
-    display: inline-block;
-    margin-left: 1.5rem;
-}
-
-.nav-links a {
+.nav-links li a {
     color: white;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s;
+    transition: 0.3s;
 }
 
-.nav-links a:hover {
+.nav-links li a.active {
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 2px;
+}
+
+.nav-links li a:hover {
     color: #ffffff;
 }
 
-/* === HERO SECTION === */
+/* === HERO / HOME SECTION === */
 #hero {
     background: linear-gradient(rgba(47, 10, 10, 0.9), rgba(47, 10, 10, 0.9)), url('background.png') center/cover;
     color: white;
@@ -91,240 +93,29 @@ nav {
     border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* === ABOUT SECTION === */
-#about {
-    padding: 4rem 2rem;
+/* === SECTION TITLES === */
+.section-header {
     text-align: center;
-    background-color: white;
-}
-
-#about h2 {
-    margin-bottom: 1rem;
-    color: #2f0a0a;
-}
-
-/* === PROJECTS SECTION === */
-#projects {
-    background-color: #f0f0f0;
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.project-card {
-    background: white;
-    padding: 1rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-}
-
-.project-card img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-/* === SKILLS SECTION === */
-#skills {
-    padding: 4rem 2rem;
-    background-color: white;
-    text-align: center;
-}
-
-.skills-list {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.skills-list li {
-    background-color: #2f0a0a;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-}
-
-/* === CONTACT SECTION === */
-#contact {
-    background-color: #f0f0f0;
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-#contact a {
-    color: #2f0a0a;
-    text-decoration: none;
-}
-
-#contact a:hover {
-    color: #ffffff;
-}
-
-/* === FOOTER === */
-footer {
-    background-color: #2f0a0a;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-}
-/* ==== NAVBAR ==== */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #2f0a0a;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-}
-
-.nav-links li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.nav-links li a:hover {
-    color: #ffffff;
-}
-
-/* ==== HAMBURGER BUTTON ==== */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-}
-
-.hamburger span {
-    width: 28px;
-    height: 3px;
-    background: white;
-    transition: 0.3s;
-    border-radius: 5px;
-}
-
-/* Animate hamburger to X */
-.hamburger.toggle span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-.hamburger.toggle span:nth-child(2) {
-    opacity: 0;
-}
-.hamburger.toggle span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-}
-
-/* ==== MOBILE MENU ==== */
-@media (max-width: 850px) {
-    .hamburger {
-        display: flex;
-    }
-
-    .nav-links {
-        position: absolute;
-        right: 0;
-        top: 70px;
-        height: 0;
-        overflow: hidden;
-        flex-direction: column;
-        background: #2f0a0a;
-        width: 100%;
-        text-align: center;
-        transition: 0.4s;
-        padding: 0;
-    }
-
-    .nav-links.active {
-        height: 250px;
-        padding-top: 1rem;
-    }
-
-    .nav-links li {
-        padding: 12px 0;
-    }
-}
-.team-section {
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-.team-subtext {
     margin-bottom: 2rem;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #2f0a0a;
+}
+
+.section-header p {
+    font-size: 1rem;
     color: #555;
-}
-
-.team-grid {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    padding: 1rem;
-}
-
-.team-card {
-    background: white;
-    padding: 1.2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-    transition: 0.3s ease;
-}
-
-.team-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.18);
-}
-
-.team-card img {
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-}
-.btn {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Section Titles */
-#about h2, #projects h2, #skills h2, #contact h2 {
-    display: inline-block; /* lets them animate independently */
-    transition: transform 0.3s ease, text-shadow 0.3s ease;
-}
-
-#about h2:hover, #projects h2:hover, #skills h2:hover, #contact h2:hover {
-    transform: translateY(-5px);
-    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 /* === PROJECT OVERVIEW === */
@@ -428,7 +219,6 @@ footer {
     line-height: 1.5;
 }
 
-/* Horizontal images in details section with hover */
 .details-images {
     display: flex;
     flex-wrap: wrap;
@@ -495,7 +285,7 @@ footer {
 }
 
 .timeline-item.alternate .timeline-content {
-    background-color: #f3e8e8; /* maroon-tinted alternate background */
+    background-color: #f3e8e8;
 }
 
 .timeline-item img {
