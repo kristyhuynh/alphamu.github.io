@@ -55,6 +55,7 @@ nav {
     font-weight: 500;
     transition: 0.3s;
     right: 300;
+    position: fixed;
 }
 
 .nav-links li a.active {
