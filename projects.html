@@ -66,3 +66,75 @@
         <p>Click to expand details</p>
       </div>
       <div id="cad-frame" class="project-details">
+        <div class="details-content">
+          <h4>CAD Frame Design Details</h4>
+          <div class="details-images">
+            <img src="placeholder1.jpg" alt="Frame Render 1" />
+            <img src="placeholder2.jpg" alt="Frame Render 2" />
+            <img src="placeholder3.jpg" alt="Frame Analysis" />
+          </div>
+          <p>
+            The CAD frame was developed in SolidWorks with multiple design iterations to optimize weight distribution and structural strength.
+          </p>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="gallery-card" onclick="toggleDetails('solar-system')">
+        <img src="project2.jpg" alt="Solar Panel System" />
+        <h3>Solar Panel System</h3>
+        <p>Click to expand details</p>
+      </div>
+      <div id="solar-system" class="project-details">
+        <div class="details-content">
+          <h4>Solar Panel System Details</h4>
+          <div class="details-images">
+            <img src="placeholder4.jpg" alt="Panel Wiring" />
+            <img src="placeholder5.jpg" alt="Mounting Detail" />
+            <img src="placeholder6.jpg" alt="System Layout" />
+          </div>
+          <p>
+            The solar subsystem features an efficient energy routing network and optimized panel angles for maximum daily sunlight absorption.
+          </p>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="gallery-card" onclick="toggleDetails('radii-range')">
+        <img src="project3.jpg" alt="360 Radii Range" />
+        <h3>360 Radii Range</h3>
+        <p>Click to expand details</p>
+      </div>
+      <div id="radii-range" class="project-details">
+        <div class="details-content">
+          <h4>360° Radii Range System</h4>
+          <div class="details-images">
+            <img src="placeholder7.jpg" alt="Rotation Motor" />
+            <img src="placeholder8.jpg" alt="Control Sensor" />
+            <img src="placeholder9.jpg" alt="Full Assembly" />
+          </div>
+          <p>
+            Implemented a 360° rotational platform driven by stepper motors and sensors to maintain optimal sunlight exposure at all times.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Alpha Mu Engineering Project | Fall 2025</p>
+  </footer>
+
+  <script>
+    function toggleDetails(id) {
+      const details = document.getElementById(id);
+      const allDetails = document.querySelectorAll(".project-details");
+      allDetails.forEach(d => {
+        if (d !== details) d.classList.remove("open");
+      });
+      details.classList.toggle("open");
+      details.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  </script>
+</body>
+</html>
