@@ -9,7 +9,7 @@
 <body>
   <header>
     <nav>
-      <h1 class="logo"><a href="index.html">Alpha Mu - <span>SPEEC</span></a></h1>
+      <h1 class="logo">Alpha Mu<span> Engineering Project</span></h1>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -21,8 +21,8 @@
 
   <!-- === Project Overview === -->
   <section id="projects">
-    <h2>Engineering Project Overview</h2>
-    <p class="section-subtext">
+    <h2 style="text-align:center;">Engineering Project Overview</h2>
+    <p class="section-subtext" style="text-align:center;">
       A multidisciplinary project combining mechanical, electrical, and software engineering.
     </p>
 
@@ -51,17 +51,17 @@
     </div>
   </section>
 
-  <!-- === Updated Project Gallery === -->
+  <!-- === Centered Project Gallery === -->
   <section id="gallery">
-    <h2>Project Gallery</h2>
-    <p class="section-subtext">Explore detailed insights into each subsystem of our engineering project.</p>
+    <h2 style="text-align:center;">Project Gallery</h2>
+    <p class="section-subtext" style="text-align:center;">Click on a project to view detailed images and descriptions.</p>
 
     <div class="gallery-container">
       <!-- Project 1 -->
       <div class="gallery-card" onclick="toggleDetails('cad-frame')">
         <img src="project1.jpg" alt="CAD Frame" />
         <h3>CAD Frame</h3>
-        <p>Click to view detailed design images and description.</p>
+        <p>Click to expand details</p>
       </div>
       <div id="cad-frame" class="project-details">
         <div class="details-content">
@@ -82,7 +82,7 @@
       <div class="gallery-card" onclick="toggleDetails('solar-system')">
         <img src="project2.jpg" alt="Solar Panel System" />
         <h3>Solar Panel System</h3>
-        <p>Click to view detailed design images and description.</p>
+        <p>Click to expand details</p>
       </div>
       <div id="solar-system" class="project-details">
         <div class="details-content">
@@ -102,7 +102,7 @@
       <div class="gallery-card" onclick="toggleDetails('radii-range')">
         <img src="project3.jpg" alt="360 Radii Range" />
         <h3>360 Radii Range</h3>
-        <p>Click to view detailed design images and description.</p>
+        <p>Click to expand details</p>
       </div>
       <div id="radii-range" class="project-details">
         <div class="details-content">
@@ -120,83 +120,21 @@
     </div>
   </section>
 
-  <!-- === Project Timeline === -->
-  <section id="timeline">
-    <h2>Project Timeline</h2>
-    <p class="section-subtext">Follow the stages of our engineering development process.</p>
-
-    <div class="timeline-container">
-      <div class="timeline-line"></div>
-
-      <div class="timeline-item left fade-in">
-        <div class="timeline-content">
-          <h4>Phase 1: Concept & Design</h4>
-          <img src="timeline1.jpg" alt="Concept Phase" />
-          <p>Brainstorming and initial layouts to establish feasibility and direction.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item right fade-in alternate">
-        <div class="timeline-content">
-          <h4>Phase 2: CAD & Simulation</h4>
-          <img src="timeline2.jpg" alt="CAD Phase" />
-          <p>SolidWorks modeling and stress simulations for performance validation.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item left fade-in">
-        <div class="timeline-content">
-          <h4>Phase 3: Prototype & Assembly</h4>
-          <img src="timeline3.jpg" alt="Prototype Phase" />
-          <p>Fabrication and integration of all mechanical and electrical subsystems.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item right fade-in alternate">
-        <div class="timeline-content">
-          <h4>Phase 4: Testing & Debugging</h4>
-          <img src="timeline4.jpg" alt="Testing Phase" />
-          <p>System calibration, bug fixes, and efficiency optimization.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item left fade-in">
-        <div class="timeline-content">
-          <h4>Phase 5: Final Deployment</h4>
-          <img src="timeline5.jpg" alt="Deployment Phase" />
-          <p>Final validation, documentation, and project presentation.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <footer>
     <p>Alpha Mu Engineering Project | Fall 2025</p>
   </footer>
 
   <script>
+    // Accordion toggle: only clicked section opens
     function toggleDetails(id) {
       const details = document.getElementById(id);
       const allDetails = document.querySelectorAll(".project-details");
-      allDetails.forEach((d) => {
+      allDetails.forEach(d => {
         if (d !== details) d.classList.remove("open");
       });
       details.classList.toggle("open");
       details.scrollIntoView({ behavior: "smooth", block: "center" });
     }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-    document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
   </script>
 </body>
 </html>
