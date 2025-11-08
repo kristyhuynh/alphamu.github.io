@@ -1,133 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team & Contacts | Alpha Mu Engineering Project</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & Team | Alpha Mu Engineering Project</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Hero section */
+    #contact-hero {
+      background: linear-gradient(rgba(47,10,10,0.85), rgba(47,10,10,0.85)), url('team-banner.jpg') center/cover;
+      color: #fff;
+      text-align: center;
+      padding: 6rem 2rem 5rem;
+    }
+
+    #contact-hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    #contact-hero p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Team grid */
+    .team-section {
+      max-width: 1100px;
+      margin: 3rem auto 4rem;
+      padding: 0 1.5rem;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+
+    .team-card {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .team-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    .team-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .team-card-content {
+      padding: 1.25rem 1.5rem 1.5rem;
+      text-align: center;
+    }
+
+    .team-card-content h3 {
+      color: #2f0a0a;
+      margin-bottom: 0.4rem;
+      font-size: 1.25rem;
+    }
+
+    .team-role {
+      color: #444;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+
+    .team-blurb {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 0.6rem;
+      line-height: 1.5;
+    }
+
+    .team-personal {
+      font-size: 0.9rem;
+      color: #666;
+      font-style: italic;
+    }
+
+    footer {
+      margin-top: 3rem;
+    }
+  </style>
 </head>
+
 <body>
+  <!-- === HEADER === -->
+  <header>
+    <nav>
+      <h1 class="logo"><a href="index.html">Alpha Mu - <span>SPEEC</span></a></h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header>
-  <nav class="navbar">
-    <h1 class="logo"><a href="index.html">Alpha Mu - <span>SPEEC</span></a></h1>
+  <!-- === HERO SECTION === -->
+  <section id="contact-hero">
+    <h2>Meet the Alpha Mu Engineering Team</h2>
+    <p>
+      Get to know the individuals behind our project — their roles, technical contributions, and the
+      creativity that drives them.
+    </p>
+  </section>
 
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+  <!-- === TEAM SECTION === -->
+  <section class="team-section">
+    <div class="section-header">
+      <h2>Our Team</h2>
+      <p>Every member plays a crucial role in design, development, and innovation.</p>
     </div>
-
-    <ul class="nav-links" id="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-
-<section class="team-section">
-    <h2>Team Contacts</h2>
-    <p class="team-subtext">Meet the team — click a profile to learn more or connect</p>
 
     <div class="team-grid">
-        
-        <!-- COPY THESE CARDS TO EDIT YOUR TEAM MEMBERS -->
-        <!-- Profile 1 -->
-        <div class="team-card">
-            <img src="images/profile1.jpg" alt="Team Member">
-            <h3>Advik Luchoomun</h3>
-            <p>Aerospace Engineering — Design & Prototyping Specialist</p>
+      <!-- Team Member Template -->
+      <div class="team-card">
+        <img src="images/profile1.jpg" alt="Team Member Placeholder">
+        <div class="team-card-content">
+          <h3>Advik Luchoomun</h3>
+          <p class="team-role">Mechanical Engineering — Design & Prototyping Lead</p>
+          <p class="team-blurb">
+            Led SolidWorks modeling and structural simulations to refine the project’s core mechanical
+            components, ensuring optimal balance and durability.
+          </p>
+          <p class="team-personal">
+            A hands-on builder and aviation enthusiast who enjoys experimenting with 3D printing and
+            flight mechanics in his free time.
+          </p>
         </div>
+      </div>
 
-        <div class="team-card">
-            <img src="images/profile2.jpg" alt="Team Member">
-            <h3>Amy Tanaka</h3>
-            <p>Environmental Engineering — CFD & Heat Transfer Expert</p>
+      <div class="team-card">
+        <img src="images/profile2.jpg" alt="Team Member Placeholder">
+        <div class="team-card-content">
+          <h3>Amy Tanaka</h3>
+          <p class="team-role">Environmental Engineering — CFD & Thermal Analysis</p>
+          <p class="team-blurb">
+            Developed the thermal management subsystem and performed ANSYS-based airflow simulations
+            to optimize heat dissipation across the system.
+          </p>
+          <p class="team-personal">
+            Outside of engineering, Amy loves hiking and creating digital landscape art inspired by
+            sustainable architecture.
+          </p>
         </div>
+      </div>
 
-        <div class="team-card">
-            <img src="images/profile3.jpg" alt="Team Member">
-            <h3>Artemis Lai</h3>
-            <p>Chemical Engineering — SolidWorks & Fusion 360 Technician</p>
+      <div class="team-card">
+        <img src="images/profile3.jpg" alt="Team Member Placeholder">
+        <div class="team-card-content">
+          <h3>Brian Do</h3>
+          <p class="team-role">Mechanical Engineering — Testing & Analysis</p>
+          <p class="team-blurb">
+            Performed structural and material stress tests to ensure performance reliability under
+            variable load conditions and environmental factors.
+          </p>
+          <p class="team-personal">
+            Brian is passionate about robotics competitions and often mentors local high-school
+            teams in CAD and fabrication.
+          </p>
         </div>
+      </div>
 
-        <div class="team-card">
-            <img src="images/profile4.jpg" alt="Team Member">
-            <h3>Brian Do</h3>
-            <p>Mechanical Engineering — Stress Testing & Failure Analysis</p>
+      <div class="team-card">
+        <img src="images/profile4.jpg" alt="Team Member Placeholder">
+        <div class="team-card-content">
+          <h3>Hana Choi</h3>
+          <p class="team-role">Electrical Engineering — PCB & Power Systems</p>
+          <p class="team-blurb">
+            Designed custom printed-circuit boards and implemented the solar charging and power
+            distribution systems for autonomous operation.
+          </p>
+          <p class="team-personal">
+            In her downtime, Hana enjoys playing piano and exploring innovative ways music and
+            circuits intersect.
+          </p>
         </div>
-        
-        <div class="team-card">
-            <img src="images/profile11.jpg" alt="Team Member">
-            <h3>Conner Kwon</h3>
-            <p>Civil Engineering - General project questions & support inquiries</p>
-        </div>
-        
-        <div class="team-card">
-            <img src="images/profile5.jpg" alt="Team Member">
-            <h3>Danielle Jeon</h3>
-            <p>Mechancial Engineering — Arduino & Control Systems</p>
-        </div>
+      </div>
 
-        <div class="team-card">
-            <img src="images/profile6.jpg" alt="Team Member">
-            <h3>Frank Lin</h3>
-            <p>Statistics — Mechatronics & Automation</p>
+      <div class="team-card">
+        <img src="images/profile5.jpg" alt="Team Member Placeholder">
+        <div class="team-card-content">
+          <h3>Reimer Dimalanta</h3>
+          <p class="team-role">Mechanical Engineering — Flight Systems & Integration</p>
+          <p class="team-blurb">
+            Oversaw aerodynamic testing and integration of subsystems, ensuring precision alignment
+            between mechanical and electronic components.
+          </p>
+          <p class="team-personal">
+            Reimer is an aspiring aerospace engineer who loves drone racing and documenting his
+            design process through photography.
+          </p>
         </div>
+      </div>
 
-        <div class="team-card">
-            <img src="images/profile7.jpg" alt="Team Member">
-            <h3>Hana Choi</h3>
-            <p>Physics & Statistics — PCB Design & Power Systems</p>
-        </div>
-
-        <div class="team-card">
-            <img src="images/profile8.jpg" alt="Team Member">
-            <h3>Ilya Semerikov</h3>
-            <p>Electrical Engineering and Computer Science — MATLAB Simulation & Data Modeling</p>
-        </div>
-
-        <div class="team-card">
-            <img src="images/profile9.jpg" alt="Team Member">
-            <h3>Kristy Huynh</h3>
-            <p>Bioengineering — CNC & 3D Printing</p>
-        </div>
-
-        <div class="team-card">
-            <img src="images/profile10.jpg" alt="Team Member">
-            <h3>Reimer Dimalanta</h3>
-            <p>Mechanical Engineering — Flight Systems & Aerodynamics</p>
-        </div>
-
+      <!-- Add more team members as needed -->
     </div>
-</section>
+  </section>
 
-<footer>
-    <p>© Alpha Mu Engineering Project | All Rights Reserved</p>
-</footer>
-
-<script>
-    const hamburger = document.getElementById("hamburger");
-    const navLinks = document.getElementById("nav-links");
-
-    hamburger.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-        hamburger.classList.toggle("toggle");
-    });
-</script>
-<script>
-  const hamburger = document.getElementById("hamburger");
-  const navLinks = document.getElementById("nav-links");
-
-  hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-    hamburger.classList.toggle("toggle");
-  });
-</script>
-
+  <!-- === FOOTER === -->
+  <footer>
+    <p>Alpha Mu Engineering Project | Fall 2025</p>
+  </footer>
 </body>
 </html>
