@@ -1,99 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Mu Engineering Project</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alpha Mu | SPEEC Engineering Project</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-  <nav class="navbar">
-    <h1 class="logo"><a href="index.html">Alpha Mu - <span>SPEEC</span></a></h1>
+  <!-- === HEADER / NAVIGATION === -->
+  <header>
+    <nav>
+      <h1 class="logo"><a href="index.html">Alpha Mu - <span>SPEEC</span></a></h1>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+  <!-- === HERO SECTION === -->
+  <section id="hero">
+    <div class="hero-content">
+      <h2>Welcome to <span>Alpha Mu Engineering</span></h2>
+      <p>
+        A multidisciplinary engineering team developing sustainable and innovative systems through
+        mechanical, electrical, and software collaboration.
+      </p>
+      <a href="about.html" class="btn">Learn More</a>
     </div>
+  </section>
 
-    <ul class="nav-links" id="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-
-    <section id="hero">
-        <div class="hero-content">
-            <h2> SOLAR POWERED ENERGY <span> EFFICIENT CHARGER </span></h2>
-            <p>Theta Tau Epsilon Chapter | Fall 2025 | Alpha Mu Pledge Class</p>
-            <a href="projects.html" class="btn">View Our Project</a>
-        </div>
-    </section>
-
-    <section id="about">
-        <h2>About The Project</h2>
+  <!-- === ABOUT PREVIEW === -->
+  <section id="about-preview">
+    <div class="section-header">
+      <h2>Who We Are</h2>
+      <p>Engineering innovation through teamwork, technology, and creativity.</p>
+    </div>
+    <div class="overview-container">
+      <div class="overview-card">
+        <img src="teamwork.jpg" alt="Team Collaboration" />
+        <h3>Our Mission</h3>
         <p>
-            A portable charger that utilizes solar panels to generate energy for sustainablity.
+          To push the boundaries of engineering education through real-world design, analysis,
+          and testing of high-performance systems.
         </p>
-    </section>
+      </div>
+      <div class="overview-card">
+        <img src="engineering.jpg" alt="Engineering Excellence" />
+        <h3>Multidisciplinary Design</h3>
+        <p>
+          Our team integrates mechanical, electrical, and software engineering principles to
+          develop cohesive and efficient prototypes.
+        </p>
+      </div>
+      <div class="overview-card">
+        <img src="leadership.jpg" alt="Leadership" />
+        <h3>Leadership & Innovation</h3>
+        <p>
+          Students lead all aspects of the project—from design to deployment—building teamwork,
+          leadership, and problem-solving skills.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <img src="project1.jpg" alt="3D Printed Drone Frame">
-                <h3>Solar Panel Charger</h3>
-                <p>Designed and optimized a 3D printed frame using SolidWorks and FEA analysis.</p>
-            </div>
-        </div>
-    </section>
+  <!-- === PROJECT PREVIEW === -->
+  <section id="project-preview">
+    <div class="section-header">
+      <h2>Our Projects</h2>
+      <p>
+        Explore our hands-on engineering projects where creativity meets precision.
+      </p>
+    </div>
+    <div class="overview-container">
+      <div class="overview-card">
+        <img src="mechanical.jpg" alt="Mechanical Project" />
+        <h3>Mechanical Systems</h3>
+        <p>
+          Advanced SolidWorks modeling, structural analysis, and iterative prototyping for
+          lightweight, high-strength designs.
+        </p>
+        <a href="projects.html" class="btn">View Details</a>
+      </div>
+      <div class="overview-card">
+        <img src="electrical.jpg" alt="Electrical Project" />
+        <h3>Electrical & Power</h3>
+        <p>
+          Integrated circuits, power optimization, and embedded systems for reliable,
+          energy-efficient performance.
+        </p>
+        <a href="projects.html" class="btn">View Details</a>
+      </div>
+      <div class="overview-card">
+        <img src="software.jpg" alt="Software Project" />
+        <h3>Software & Control</h3>
+        <p>
+          Intelligent automation through Python, MATLAB, and Arduino—bringing our mechanical
+          designs to life.
+        </p>
+        <a href="projects.html" class="btn">View Details</a>
+      </div>
+    </div>
+  </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul class="skills-list">
-            <li> OnShape CAD </li>
-            <li> Electrical Systems </li>
-            <li> Charge Analysis </li>
-            <li> Python & Arduino </li>
-            <li> Prototyping & Testing </li>
-        </ul>
-    </section>
+  <!-- === CONTACT PREVIEW === -->
+  <section id="contact-preview">
+    <div class="section-header">
+      <h2>Get In Touch</h2>
+      <p>
+        Interested in collaboration, mentorship, or learning more about our project? We'd love to connect!
+      </p>
+      <a href="contact.html" class="btn">Contact Us</a>
+    </div>
+  </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:alpha-mu-pledge-class@googlegroups.com">alpha-mu-pledge-class@googlegroups.com</a></p>
-        <p>Intagram: <a href="#">@alphamooo</a></p>
-        <p>GitHub: <a href="#">github.com/alphamu.github.io</a></p>
-    </section>
-
-    <footer>
-        <p>Alpha Mu Engineering Project | Fall 2025</p>
-    </footer>
-
-<script>
-    const hamburger = document.getElementById("hamburger");
-    const navLinks = document.getElementById("nav-links");
-
-    hamburger.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-        hamburger.classList.toggle("toggle");
-    });
-</script>
-<script>
-  const hamburger = document.getElementById("hamburger");
-  const navLinks = document.getElementById("nav-links");
-
-  hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-    hamburger.classList.toggle("toggle");
-  });
-</script>
-
+  <!-- === FOOTER === -->
+  <footer>
+    <p>Alpha Mu Engineering Project | Fall 2025</p>
+  </footer>
 </body>
 </html>
