@@ -23,7 +23,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+    
 }
 
 .logo {
@@ -48,6 +48,7 @@ nav {
     list-style: none;
     display: flex;
     gap: 2rem;
+    position: fixed;
 }
 
 .nav-links li a {
