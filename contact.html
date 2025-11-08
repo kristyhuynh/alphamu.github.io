@@ -119,6 +119,15 @@
         hamburger.classList.toggle("toggle");
     });
 </script>
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    hamburger.classList.toggle("toggle");
+  });
+</script>
 
 </body>
 </html>
