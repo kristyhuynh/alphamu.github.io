@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects | Alpha Mu Engineering Project</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Details | Alpha Mu Engineering Project</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- HEADER -->
   <header>
-    <nav>
+    <nav class="navbar">
       <h1 class="logo"><a href="index.html">Alpha Mu - <span>SPEEC</span></a></h1>
-      <ul class="nav-links">
+
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+
+      <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="projects.html" class="active">Projects</a></li>
@@ -20,72 +26,113 @@
     </nav>
   </header>
 
-  <section id="projects">
+  <!-- === Project Overview === -->
+  <section id="project-overview">
     <div class="section-header">
-      <h2>Our Projects</h2>
-      <p>Explore our design, analysis, and innovation work.</p>
+      <h2>Engineering Project Overview</h2>
+      <p>A multidisciplinary project combining mechanical, electrical, and software engineering.</p>
     </div>
 
     <div class="overview-container">
-      <div class="overview-card" onclick="toggleDetails('project1-details')">
-        <img src="project1.png" alt="Project 1">
-        <h3>Charging System Design</h3>
-        <p>Efficient and safe high-speed electric vehicle charging.</p>
+      <div class="overview-card">
+        <img src="mechanical.jpg" alt="Mechanical Overview" />
+        <h3>Mechanical Overview</h3>
+        <p>
+          Designed and modeled the frame structure in SolidWorks with a focus on weight reduction and strength optimization.
+        </p>
       </div>
-
-      <div class="overview-card" onclick="toggleDetails('project2-details')">
-        <img src="project2.png" alt="Project 2">
-        <h3>Thermal Management</h3>
-        <p>Cooling optimization for energy-efficient systems.</p>
+      <div class="overview-card">
+        <img src="electrical.jpg" alt="Electrical Overview" />
+        <h3>Electrical Overview</h3>
+        <p>
+          Developed and wired a robust electrical system integrating solar input, sensors, and efficient control circuitry.
+        </p>
       </div>
-
-      <div class="overview-card" onclick="toggleDetails('project3-details')">
-        <img src="project3.png" alt="Project 3">
-        <h3>Prototyping & Validation</h3>
-        <p>CAD, simulation, and rapid prototyping integration.</p>
-      </div>
-    </div>
-
-    <!-- === EXPANDABLE DETAILS === -->
-    <div class="project-details" id="project1-details">
-      <div class="details-content">
-        <h4>Charging System Design</h4>
-        <div class="details-images">
-          <img src="charge1.png" alt="Charging CAD">
-          <img src="charge2.png" alt="Charging Prototype">
-        </div>
-        <p>Our charging system optimizes safety and performance using high-efficiency thermal and power flow models. 
-           Through CAD modeling and simulation, we developed a modular, scalable architecture suitable for various vehicle platforms.</p>
+      <div class="overview-card">
+        <img src="software.jpg" alt="Software Overview" />
+        <h3>Software Overview</h3>
+        <p>
+          Programmed embedded control systems for real-time data monitoring and feedback, enabling autonomous operation.
+        </p>
       </div>
     </div>
+  </section>
 
-    <div class="project-details" id="project2-details">
-      <div class="details-content">
-        <h4>Thermal Management System</h4>
-        <div class="details-images">
-          <img src="thermal1.png" alt="Thermal Simulation">
-          <img src="thermal2.png" alt="Cooling Model">
-        </div>
-        <p>We developed and tested multiple cooling concepts through CFD analysis. 
-           Results showed significant heat reduction and system stability improvements during prolonged use.</p>
-      </div>
-    </div>
-
-    <div class="project-details" id="project3-details">
-      <div class="details-content">
-        <h4>Prototyping & Validation</h4>
-        <div class="details-images">
-          <img src="proto1.png" alt="Prototype Testing">
-          <img src="proto2.png" alt="3D Model">
-        </div>
-        <p>Our prototypes validated mechanical integrity and performance predictions. 
-           The iterative design cycle allowed us to refine each system for both efficiency and manufacturability.</p>
-      </div>
-    </div>
-
-    <!-- === TIMELINE SECTION === -->
+  <!-- === Project Gallery === -->
+  <section id="project-gallery">
     <div class="section-header">
-      <h2>Project Development Timeline</h2>
+      <h2>Project Gallery</h2>
+      <p>Explore detailed insights into each subsystem of our engineering project.</p>
+    </div>
+
+    <div class="gallery-container">
+      <!-- Project 1 -->
+      <div class="gallery-card" onclick="toggleDetails('cad-frame')">
+        <img src="project1.jpg" alt="CAD Frame" />
+        <h3>CAD Frame</h3>
+        <p>Click to expand details</p>
+      </div>
+      <div id="cad-frame" class="project-details">
+        <div class="details-content">
+          <h4>CAD Frame Design Details</h4>
+          <div class="details-images">
+            <img src="placeholder1.jpg" alt="Frame Render 1" />
+            <img src="placeholder2.jpg" alt="Frame Render 2" />
+            <img src="placeholder3.jpg" alt="Frame Analysis" />
+          </div>
+          <p>
+            The CAD frame was developed in SolidWorks with multiple design iterations to optimize weight distribution and structural strength.
+          </p>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="gallery-card" onclick="toggleDetails('solar-system')">
+        <img src="project2.jpg" alt="Solar Panel System" />
+        <h3>Solar Panel System</h3>
+        <p>Click to expand details</p>
+      </div>
+      <div id="solar-system" class="project-details">
+        <div class="details-content">
+          <h4>Solar Panel System Details</h4>
+          <div class="details-images">
+            <img src="placeholder4.jpg" alt="Panel Wiring" />
+            <img src="placeholder5.jpg" alt="Mounting Detail" />
+            <img src="placeholder6.jpg" alt="System Layout" />
+          </div>
+          <p>
+            The solar subsystem features an efficient energy routing network and optimized panel angles for maximum daily sunlight absorption.
+          </p>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="gallery-card" onclick="toggleDetails('radii-range')">
+        <img src="project3.jpg" alt="360 Radii Range" />
+        <h3>360 Radii Range</h3>
+        <p>Click to expand details</p>
+      </div>
+      <div id="radii-range" class="project-details">
+        <div class="details-content">
+          <h4>360° Radii Range System</h4>
+          <div class="details-images">
+            <img src="placeholder7.jpg" alt="Rotation Motor" />
+            <img src="placeholder8.jpg" alt="Control Sensor" />
+            <img src="placeholder9.jpg" alt="Full Assembly" />
+          </div>
+          <p>
+            Implemented a 360° rotational platform driven by stepper motors and sensors to maintain optimal sunlight exposure at all times.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === Project Timeline === -->
+  <section id="timeline">
+    <div class="section-header">
+      <h2>Project Timeline</h2>
+      <p>Follow the stages of our engineering development process.</p>
     </div>
 
     <div class="timeline-container">
@@ -93,33 +140,41 @@
 
       <div class="timeline-item left fade-in">
         <div class="timeline-content">
-          <img src="timeline1.png" alt="Concept Phase">
-          <h4>Concept & Research</h4>
-          <p>Initial research and brainstorming of charging solutions.</p>
+          <h4>Phase 1: Concept & Design</h4>
+          <img src="timeline1.jpg" alt="Concept Phase" />
+          <p>Brainstorming and initial layouts to establish feasibility and direction.</p>
         </div>
       </div>
 
-      <div class="timeline-item right fade-in">
-        <div class="timeline-content alternate">
-          <img src="timeline2.png" alt="Design Phase">
-          <h4>CAD Design & Simulation</h4>
-          <p>Modeling and validating system efficiency with simulation tools.</p>
+      <div class="timeline-item right fade-in alternate">
+        <div class="timeline-content">
+          <h4>Phase 2: CAD & Simulation</h4>
+          <img src="timeline2.jpg" alt="CAD Phase" />
+          <p>SolidWorks modeling and stress simulations for performance validation.</p>
         </div>
       </div>
 
       <div class="timeline-item left fade-in">
         <div class="timeline-content">
-          <img src="timeline3.png" alt="Prototyping Phase">
-          <h4>Prototyping</h4>
-          <p>Building physical models and performing real-world validation.</p>
+          <h4>Phase 3: Prototype & Assembly</h4>
+          <img src="timeline3.jpg" alt="Prototype Phase" />
+          <p>Fabrication and integration of all mechanical and electrical subsystems.</p>
         </div>
       </div>
 
-      <div class="timeline-item right fade-in">
-        <div class="timeline-content alternate">
-          <img src="timeline4.png" alt="Final Review">
-          <h4>Final Evaluation</h4>
-          <p>Testing, documentation, and presentation of results.</p>
+      <div class="timeline-item right fade-in alternate">
+        <div class="timeline-content">
+          <h4>Phase 4: Testing & Debugging</h4>
+          <img src="timeline4.jpg" alt="Testing Phase" />
+          <p>System calibration, bug fixes, and efficiency optimization.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item left fade-in">
+        <div class="timeline-content">
+          <h4>Phase 5: Final Deployment</h4>
+          <img src="timeline5.jpg" alt="Deployment Phase" />
+          <p>Final validation, documentation, and project presentation.</p>
         </div>
       </div>
     </div>
@@ -130,21 +185,39 @@
   </footer>
 
   <script>
+    // Navbar toggle
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+      hamburger.classList.toggle("toggle");
+    });
+
+    // Accordion toggle
     function toggleDetails(id) {
-      const detail = document.getElementById(id);
-      detail.classList.toggle('open');
+      const details = document.getElementById(id);
+      const allDetails = document.querySelectorAll(".project-details");
+      allDetails.forEach(d => {
+        if (d !== details) d.classList.remove("open");
+      });
+      details.classList.toggle("open");
+      details.scrollIntoView({ behavior: "smooth", block: "center" });
     }
 
-    // Optional: Fade-in timeline animation
-    const fadeElements = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.2 });
-    fadeElements.forEach(el => observer.observe(el));
+    // Fade-in animation for timeline items
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+    document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
   </script>
 </body>
 </html>
