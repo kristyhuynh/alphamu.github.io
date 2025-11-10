@@ -10,23 +10,23 @@ body {
     color: #333;
     background-color: #f9f9f9;
     line-height: 1.6;
-    padding-top: 90px; /* Space so content isn't hidden behind header */
+    padding-top: 90px; /* ensures content is below the fixed header */
 }
 
-/* === NAVIGATION === */
+/* === HEADER / NAVIGATION === */
 header {
-    background-color: #2f0a0a;
+    background-color: #2f0a0a; /* consistent dark red for all pages */
     color: white;
-    padding: 1rem 2rem;
+    padding: 1rem 2rem; /* consistent height */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-nav {
+nav.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,44 +34,37 @@ nav {
     margin: 0 auto;
 }
 
-.logo {
-    font-size: 1.6rem;
-    font-weight: bold;
-}
-
 .logo a {
     text-decoration: none;
-    color: inherit;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem; /* consistent logo size */
 }
 
-.logo a:hover {
-    opacity: 0.8;
+.logo span {
+    color: #ffffff;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
     gap: 2rem;
-    align-items: center;
-    justify-content: flex-end;
-    margin-right: 1rem;
 }
 
 .nav-links li a {
     color: white;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-    position: relative;
+    transition: color 0.3s ease;
 }
 
 .nav-links li a.active {
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff; /* underline active page */
     padding-bottom: 2px;
 }
 
 .nav-links li a:hover {
-    color: #f5cfcf;
+    color: #ddd;
 }
 
 /* === HAMBURGER MENU === */
@@ -89,6 +82,7 @@ nav {
     transition: all 0.3s ease;
 }
 
+/* toggle animation */
 .hamburger.toggle span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
@@ -99,7 +93,7 @@ nav {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* === RESPONSIVE NAVIGATION === */
+/* === MOBILE NAVIGATION === */
 @media (max-width: 900px) {
     .hamburger {
         display: flex;
@@ -109,7 +103,7 @@ nav {
         position: absolute;
         top: 70px;
         right: 2rem;
-        background: #2f0a0a;
+        background: #2f0a0a; /* match header color */
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
@@ -124,25 +118,17 @@ nav {
     }
 }
 
-/* === HERO / HOME / CONTACT SECTION === */
-#hero,
-#contact-hero {
-    background: linear-gradient(rgba(47, 10, 10, 0.85), rgba(47, 10, 10, 0.85)), url('background.png') center/cover;
+/* === HERO / HOME SECTION === */
+#hero {
+    background: linear-gradient(rgba(47, 10, 10, 0.9), rgba(47, 10, 10, 0.9)), url('background.png') center/cover;
     color: white;
     text-align: center;
     padding: 6rem 2rem;
 }
 
-#contact-hero {
-    background: linear-gradient(rgba(47,10,10,0.85), rgba(47,10,10,0.85)), url('team-banner.jpg') center/cover;
-    padding: 9rem 2rem 6rem; /* Adjusted spacing for fixed header */
-}
-
-.hero-content h2,
-#contact-hero h2 {
-    font-size: 2.5rem; /* Unified font size */
+.hero-content h2 {
+    font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #ffffff;
 }
 
 .hero-content span {
@@ -153,7 +139,6 @@ nav {
     margin-bottom: 2rem;
 }
 
-/* === BUTTONS === */
 .btn {
     background-color: #ffffff;
     color: #2f0a0a;
@@ -169,7 +154,7 @@ nav {
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* === SECTION HEADERS === */
+/* === SECTION TITLES === */
 .section-header {
     text-align: center;
     margin-bottom: 2rem;
@@ -179,9 +164,6 @@ nav {
     font-size: 2rem;
     margin-bottom: 0.5rem;
     color: #2f0a0a;
-    border-bottom: 3px solid #2f0a0a; /* underline for all headers */
-    display: inline-block;
-    padding-bottom: 5px;
 }
 
 .section-header p {
