@@ -455,3 +455,65 @@ nav.navbar {
     display: flex;
   }
 }
+/* === NAVIGATION (FIXED HEADER, NO OVERLAP) === */
+header {
+  background-color: #2f0a0a;
+  color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Push page content below the fixed header */
+body {
+  color: #333;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+  padding-top: 80px; /* 👈 this adds space below the fixed header */
+}
+
+/* Navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a.active {
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 2px;
+}
+
+.nav-links li a:hover {
+  color: #ddd;
+}
+
+/* Logo styling */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
+}
