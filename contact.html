@@ -6,12 +6,101 @@
   <title>Contact & Team | Alpha Mu Engineering Project</title>
   <link rel="stylesheet" href="style.css" />
   <style>
+    /* === HEADER === */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(47,10,10,0.95);
+      color: #fff;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+    }
+
+    .logo a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .logo span {
+      color: #f4b400;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #f4b400;
+    }
+
+    /* === Hamburger Menu === */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      background: #fff;
+      height: 3px;
+      width: 25px;
+      margin: 4px 0;
+      transition: 0.3s;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: rgba(47,10,10,0.95);
+        width: 200px;
+        text-align: right;
+        padding: 1rem;
+        border-radius: 8px 0 0 8px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
     /* === Hero Section === */
     #contact-hero {
       background: linear-gradient(rgba(47,10,10,0.85), rgba(47,10,10,0.85)), url('team-banner.jpg') center/cover;
       color: #fff;
       text-align: center;
-      padding: 6rem 2rem 5rem;
+      padding: 9rem 2rem 6rem; /* space for fixed header */
+      margin-top: 60px;
     }
 
     #contact-hero h2 {
@@ -30,6 +119,21 @@
       max-width: 1200px;
       margin: 3rem auto 4rem;
       padding: 0 1.5rem;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .section-header h2 {
+      font-size: 2rem;
+      color: #2f0a0a;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-header p {
+      color: #555;
     }
 
     .team-grid {
@@ -64,8 +168,25 @@
 
     .team-card-content h3 {
       color: #2f0a0a;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.3rem;
       font-size: 1.25rem;
+    }
+
+    .team-email {
+      font-size: 0.9rem;
+      color: #444;
+      margin-bottom: 0.6rem;
+      word-wrap: break-word;
+    }
+
+    .team-email a {
+      color: #b22222;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .team-email a:hover {
+      text-decoration: underline;
     }
 
     .team-role {
@@ -88,7 +209,10 @@
     }
 
     footer {
-      margin-top: 3rem;
+      text-align: center;
+      padding: 1rem 0;
+      background: rgba(47,10,10,0.95);
+      color: #fff;
     }
   </style>
 </head>
@@ -98,7 +222,12 @@
   <header>
     <nav>
       <h1 class="logo"><a href="index.html">Alpha Mu - <span>SPEEC</span></a></h1>
-      <ul class="nav-links">
+
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+
+      <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="projects.html">Project</a></li>
         <li><a href="skills.html">Skills</a></li>
@@ -110,10 +239,7 @@
   <!-- === HERO SECTION === -->
   <section id="contact-hero">
     <h2>Meet the Alpha Mu Engineering Team</h2>
-    <p>
-      Get to know the individuals behind our project — their roles, technical contributions, and the
-      passions that drives them.
-    </p>
+    <p>Get to know the individuals behind our project — their roles, technical contributions, and the passions that drive them.</p>
   </section>
 
   <!-- === TEAM SECTION === -->
@@ -129,6 +255,7 @@
         <img src="images/profile1.jpg" alt="Advik Luchoomun">
         <div class="team-card-content">
           <h3>Advik Luchoomun</h3>
+          <p class="team-email"><a href="mailto:advik@berkeley.edu">advik@berkeley.edu</a></p>
           <p class="team-role">Aerospace Engineering — Soldering and Assembly</p>
           <p class="team-blurb">Solders components, wires circuits, and ensured reliable connections so that everything is fully funcitoning.</p>
           <p class="team-personal">A hands-on builder and aviation enthusiast passionate about innovation and design while attending every music festival.</p>
@@ -140,17 +267,19 @@
         <img src="images/profile2.jpg" alt="Amy Tanaka">
         <div class="team-card-content">
           <h3>Amy Tanaka</h3>
+          <p class="team-email"><a href="mailto:yuukaamytanaka@berkeley.edu">yuukaamytanaka@berkeley.edu</a></p>
           <p class="team-role">Environmental Engineering — Sustainablity & Arduino</p>
           <p class="team-blurb">Developed the thermal management subsystem and conducted airflow simulations for heat optimization.</p>
           <p class="team-personal">Enjoys being in nature and watching movies like Jurassic Park and Star Wars.</p>
         </div>
       </div>
       
-  <!-- 3 -->
+      <!-- 3 -->
       <div class="team-card">
         <img src="images/profile3.jpg" alt="Artemis Lai">
         <div class="team-card-content">
           <h3>Artemis Lai</h3>
+          <p class="team-email"><a href="mailto:lai000@berkeley.edu">lai000@berkeley.edu</a></p>
           <p class="team-role">Chemical Engineering — Web Development & Voltage</p>
           <p class="team-blurb">Performed integrated simulations to ensure subsystem compatibility and efficiency.</p>
           <p class="team-personal">Loves listening to music and going to music festivals, trying new desserts, working on CPUs.</p>
@@ -162,6 +291,7 @@
         <img src="images/profile4.jpg" alt="Brian Do">
         <div class="team-card-content">
           <h3>Brian Do</h3>
+          <p class="team-email"><a href="mailto:bdo@berkeley.edu">bdo@berkeley.edu</a></p>
           <p class="team-role">Mechanical Engineering — CAD Designer & Manufacturing</p>
           <p class="team-blurb">Conducted stress tests to ensure performance reliability under varying conditions.</p>
           <p class="team-personal">Enjoys rock climbing and all outlets of music, and always willing to spread his humor</p>
@@ -173,9 +303,10 @@
         <img src="images/profile5.jpg" alt="Conner Kwon">
         <div class="team-card-content">
           <h3>Conner Kwon</h3>
+          <p class="team-email"><a href="mailto:connerjkwon@berkeley.edu">connerjkwon@berkeley.edu</a></p>
           <p class="team-role">Civil Engineering — Materials & Structural Analyst</p>
-          <p class="team-blurb">ensures the frame is weather-resistant,stable,and able to handle the outdoors.</p>
-          <p class="team-personal">A mobile game enthusiast with a deep passion for helpping those around him.</p>
+          <p class="team-blurb">Ensures the frame is weather-resistant, stable, and able to handle the outdoors.</p>
+          <p class="team-personal">A mobile game enthusiast with a deep passion for helping those around him.</p>
         </div>
       </div>
 
@@ -184,6 +315,7 @@
         <img src="images/profile6.jpg" alt="Danielle Jeon">
         <div class="team-card-content">
           <h3>Danielle Jeon</h3>
+          <p class="team-email"><a href="mailto:daniellesjeon@berkeley.edu">daniellesjeon@berkeley.edu</a></p>
           <p class="team-role">Mechanical Engineering — CAD Designer & Manufacturing</p>
           <p class="team-blurb">Designed parts of the housing and layout of internal components.</p>
           <p class="team-personal">Chipotle's top customer and the best dancer of the Alpha Mu team.</p>
@@ -195,6 +327,7 @@
         <img src="images/profile7.jpg" alt="Hana Choi">
         <div class="team-card-content">
           <h3>Hana Choi</h3>
+          <p class="team-email"><a href="mailto:hanaxchoi@berkeley.edu">hanaxchoi@berkeley.edu</a></p>
           <p class="team-role">Physics & Statistics — Manufacturing & Power Systems</p>
           <p class="team-blurb">Designed PCBs and implemented the power management network for autonomous operations.</p>
           <p class="team-personal">Avid model rocketry enthusiast that embraces the F1 racing life.</p>
@@ -206,8 +339,9 @@
         <img src="images/profile8.jpg" alt="Frank Lin">
         <div class="team-card-content">
           <h3>Frank Lin</h3>
+          <p class="team-email"><a href="mailto:franklin1028@berkeley.edu">franklin1028@berkeley.edu</a></p>
           <p class="team-role">Statistics — Data & Perfomance Analyst</p>
-          <p class="team-blurb">Logs sunlight data, panel angles, and efficiency over time for optimizaton.</p>
+          <p class="team-blurb">Logs sunlight data, panel angles, and efficiency over time for optimization.</p>
           <p class="team-personal">A top-notch barber who loves playing basketball. #linsanity</p>
         </div>
       </div>
@@ -217,6 +351,7 @@
         <img src="images/profile9.jpg" alt="Ilya Semerikov">
         <div class="team-card-content">
           <h3>Ilya Semerikov</h3>
+          <p class="team-email"><a href="mailto:ilya-seme@berkeley.edu">ilya-seme@berkeley.edu</a></p>
           <p class="team-role">Electrical Engineering and Computer Science — Circuit Designer and CAD Designer</p>
           <p class="team-blurb">Designed and prototyped the control circuit (sensors, servos, power management).</p>
           <p class="team-personal">Enjoys UFC, practicing the drums, and experimenting with electronics.</p>
@@ -228,9 +363,10 @@
         <img src="images/profile10.jpg" alt="Kristy Huynh">
         <div class="team-card-content">
           <h3>Kristy Huynh</h3>
-          <p class="team-role">Bioengineering — Web Development & Sofware</p>
+          <p class="team-email"><a href="mailto:kristyhuynh@berkeley.edu">kristyhuynh@berkeley.edu</a></p>
+          <p class="team-role">Bioengineering — Web Development & Software</p>
           <p class="team-blurb">Programmed and optimized the website of our project, filmed and documented media used to showcase our project.</p>
-          <p class="team-personal">Enjoys watching tv shows and movies, trying new foods with loved ones, exploring new outlets for creativity.</p>
+          <p class="team-personal">Enjoys watching TV shows and movies, trying new foods with loved ones, exploring new outlets for creativity.</p>
         </div>
       </div>
 
@@ -239,8 +375,9 @@
         <img src="images/profile11.jpg" alt="Reimer Dimalanta">
         <div class="team-card-content">
           <h3>Reimer Dimalanta</h3>
+          <p class="team-email"><a href="mailto:r.dimalanta@berkeley.edu">r.dimalanta@berkeley.edu</a></p>
           <p class="team-role">Mechanical Engineering — Manufacturing Lead & CAD Designer</p>
-          <p class="team-blurb">Designed the standing mechanism as well as the mount for the panel using CAD (Fusion 360, Onshape,etc).  Lead and oversaw the fabrication of the parts.</p>
+          <p class="team-blurb">Designed the standing mechanism as well as the mount for the panel using CAD (Fusion 360, Onshape, etc). Lead and oversaw the fabrication of the parts.</p>
           <p class="team-personal">Enjoys climbing, spending time exploring, and going thrifting with friends.</p>
         </div>
       </div>
@@ -251,5 +388,14 @@
   <footer>
     <p>Alpha Mu Engineering Project | Fall 2025</p>
   </footer>
+
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
 </body>
 </html>
